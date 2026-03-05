@@ -114,24 +114,82 @@ export default function HomePage() {
   };
 
   return (
-    <main className="page-shell">
-      <section className="hero-card">
+    <main className="landing">
+      <header className="topbar shell">
+        <a className="brand" href="#top">
+          <span className="brand-dot" aria-hidden>
+            f
+          </span>
+          <strong>FixPage</strong>
+        </a>
+        <nav className="top-nav" aria-label="주요 섹션">
+          <a href="#services">서비스</a>
+          <a href="#quote">견적 계산</a>
+          <a href="#inquiry">문의</a>
+        </nav>
+      </header>
+
+      <section id="top" className="hero shell reveal">
         <div className="hero-copy">
-          <p className="eyebrow">FixPage</p>
-          <h1>웹 개발 외주 견적을 먼저 계산하고 바로 문의까지 연결합니다.</h1>
-          <p className="hero-text">
-            숨고나 크몽에 올리기 전에, 고객이 직접 옵션을 고르고 예상 비용을 이해할 수 있는
-            실전형 소개 페이지입니다.
+          <p className="section-label">웹페이지 외주 랜딩</p>
+          <h1>디자인은 명확하게, 견적은 투명하게.</h1>
+          <p>
+            토스식으로 신뢰감 있는 화면에서 고객이 직접 옵션을 고르고 예상 비용을 확인한 뒤
+            바로 문의까지 연결합니다.
           </p>
+          <div className="hero-actions">
+            <a className="primary-btn" href="#quote">
+              견적 바로 계산
+            </a>
+            <a className="ghost-btn" href="#inquiry">
+              문의 남기기
+            </a>
+          </div>
         </div>
-        <div className="hero-note">
-          <span>기본 추천</span>
-          <strong>Next.js + 문의 API + Vercel 배포</strong>
-          <p>처음에는 이 페이지를 포트폴리오 겸 영업용 랜딩으로 사용하면 됩니다.</p>
+        <div className="hero-stack" aria-hidden>
+          <article className="floating-card card-main">
+            <p>현재 예상 견적</p>
+            <strong>{currency.format(total)}원</strong>
+            <span>{selectedServices.length}개 옵션 선택됨</span>
+          </article>
+          <article className="floating-card card-sub">
+            <p>응답 속도</p>
+            <strong>평균 24시간 이내</strong>
+          </article>
+          <article className="floating-card card-sub">
+            <p>기본 포함</p>
+            <strong>반응형 + 문의 API</strong>
+          </article>
         </div>
       </section>
 
-      <section className="content-grid">
+      <section className="intro shell reveal">
+        <h2>
+          내 비즈니스에 맞는 웹사이트를
+          <br />
+          한 페이지에서 쉽고 빠르게 준비하세요.
+        </h2>
+      </section>
+
+      <section id="services" className="feature-grid shell reveal">
+        <article className="feature-card">
+          <p className="feature-eyebrow">홈 · 소개</p>
+          <h3>브랜드 첫인상을 정리한 메인 구조</h3>
+          <p>정보 우선순위를 맞춰 전환율 중심의 섹션 구성을 제공합니다.</p>
+        </article>
+        <article className="feature-card">
+          <p className="feature-eyebrow">서비스 상세</p>
+          <h3>고객이 이해하기 쉬운 설명 흐름</h3>
+          <p>복잡한 내용을 짧고 명확한 문장과 시각 요소로 풀어냅니다.</p>
+        </article>
+        <article className="feature-card">
+          <p className="feature-eyebrow">문의 전환</p>
+          <h3>클릭 한 번으로 상담 연결</h3>
+          <p>랜딩 하단에서 바로 문의를 보내고, 서버로 안전하게 수집합니다.</p>
+        </article>
+      </section>
+
+      <section id="quote" className="quote-area shell reveal">
         <div className="panel">
           <div className="panel-heading">
             <p className="section-label">STEP 1</p>
@@ -185,7 +243,7 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="panel form-panel">
+      <section id="inquiry" className="panel shell form-panel reveal">
         <div className="panel-heading">
           <p className="section-label">STEP 3</p>
           <h2>문의 내용 보내기</h2>

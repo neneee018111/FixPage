@@ -89,6 +89,42 @@ textarea {
   font-size: 0.95rem;
 }
 
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  justify-content: flex-end;
+  margin-left: 28px;
+}
+
+.top-controls .top-nav {
+  margin-right: 22px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0;
+  letter-spacing: 0.03em;
+}
+
+.lang-btn.active {
+  color: var(--text);
+}
+
 .hero,
 .panel {
   border: 1px solid var(--border);
@@ -416,6 +452,13 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .top-controls {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .top-nav {

@@ -158,7 +158,7 @@ export default function HomePage() {
           </article>
           <article className="floating-card card-sub">
             <p>기본 포함</p>
-            <strong>반응형 + 문의 API</strong>
+            <strong>반응형</strong>
           </article>
         </div>
       </section>

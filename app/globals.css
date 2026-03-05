@@ -271,6 +271,7 @@ textarea {
 
 .options {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -313,7 +314,17 @@ textarea {
 .option-card strong,
 .summary-total strong,
 .summary-list strong {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
+}
+
+.option-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.option-card > span {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .summary-panel {
@@ -416,6 +427,7 @@ textarea {
   .hero,
   .feature-grid,
   .quote-area,
+  .options,
   .inquiry-form {
     grid-template-columns: 1fr;
   }

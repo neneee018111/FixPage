@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useMemo, useState } from "react";
 
@@ -173,7 +173,7 @@ export default function HomePage() {
 
       <section id="services" className="feature-grid shell reveal">
         <article className="feature-card">
-          <p className="feature-eyebrow">홈 · 소개</p>
+          <p className="feature-eyebrow">홈  소개</p>
           <h3>브랜드 첫인상을 정리한 메인 구조</h3>
           <p>정보 우선순위를 맞춰 전환율 중심의 섹션 구성을 제공합니다.</p>
         </article>

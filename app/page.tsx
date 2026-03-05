@@ -51,7 +51,7 @@ const serviceOptions: ServiceOption[] = [
 const currency = new Intl.NumberFormat("ko-KR");
 
 export default function HomePage() {
-  const [selectedOptions, setSelectedOptions] = useState<string[]>(["landing", "form"]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(["landing"]);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
